@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Linha Editorial · Dr. Frederico Menezes</title>
+<meta name="description" content="Como o Dr. Frederico Menezes comunica energia, equilíbrio hormonal e longevidade, com linhas distintas para mulheres e homens.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<style>
+:root{
+  --ink:#10263a; --deep:#0b1c2b; --teal:#1b8a7e; --teal-2:#5fc2b3; --teal-soft:#e3f1ef;
+  --ela:#d8693c; --ela-soft:#fbebe3; --ele:#3b6ea5; --ele-soft:#e5edf6;
+  --warn:#a5402c; --muted:#5d6c7b; --line:#e2e6ea; --bg:#fafaf8; --card:#fff;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --head:"Inter Tight",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--teal);color:#fff}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);letter-spacing:-.025em;line-height:1.08}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px}
+@media(max-width:640px){.wrap{padding:0 16px}body{font-size:16px}}
+
+/* progress + nav */
+.progress{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--teal),var(--teal-2));z-index:60}
+.nav{position:fixed;top:14px;left:50%;transform:translate(-50%,-140%);z-index:50;display:flex;align-items:center;gap:6px;padding:6px 6px 6px 18px;border-radius:999px;background:rgba(11,28,43,.78);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border:1px solid rgba(255,255,255,.08);box-shadow:0 10px 40px -10px rgba(0,0,0,.4);transition:transform .7s var(--ease);max-width:calc(100vw - 24px)}
+.nav.show{transform:translate(-50%,0)}
+.nav .brand{color:#fff;font:600 13px var(--head);white-space:nowrap;margin-right:8px}
+.nav .brand i{font-style:normal;color:var(--teal-2)}
+.nav .links{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.nav .links::-webkit-scrollbar{display:none}
+.nav a{color:rgba(255,255,255,.62);text-decoration:none;font:500 12.5px var(--body);padding:7px 12px;border-radius:999px;white-space:nowrap;transition:.3s}
+.nav a:hover{color:#fff}
+.nav a.on{background:rgba(255,255,255,.1);color:#fff}
+@media(max-width:760px){.nav .brand{display:none}.nav{padding-left:6px}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;background:var(--ink);color:#fff;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.orb{position:absolute;width:min(62vw,720px);aspect-ratio:1;border-radius:50%;top:-22%;right:-12%;background:radial-gradient(circle at 38% 30%,#1f6e6a 0%,#164f57 38%,rgba(16,38,58,0) 72%);filter:blur(2px);animation:drift 18s ease-in-out infinite alternate;will-change:transform}
+.orb.b{width:min(40vw,460px);top:auto;bottom:-30%;left:-14%;right:auto;background:none;border:1px solid rgba(255,255,255,.1);animation-duration:24s;filter:none}
+@keyframes drift{to{transform:translate(-4%,6%) scale(1.06)}}
+.grain{position:absolute;inset:0;opacity:.07;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero .wrap{position:relative;width:100%;padding-top:140px;padding-bottom:56px}
+.chip{display:inline-block;font:600 11.5px var(--body);letter-spacing:.22em;text-transform:uppercase;color:var(--teal-2);border:1px solid rgba(95,194,179,.4);padding:9px 18px;border-radius:999px}
+.hero h1{font-size:clamp(56px,11vw,148px);font-weight:800;letter-spacing:-.05em;margin:28px 0 26px;line-height:.95}
+.hero h1 .ch{display:inline-block;transform:translateY(105%);opacity:0;animation:up 1.1s var(--ease) forwards;animation-delay:calc(var(--i)*35ms + .25s)}
+.hero h1 .w{display:inline-block;overflow:hidden;padding-bottom:.06em;vertical-align:bottom}
+@keyframes up{to{transform:none;opacity:1}}
+.hero p.lead{max-width:640px;font-size:clamp(18px,2vw,22px);color:rgba(255,255,255,.72);line-height:1.55}
+.hero .meta{margin-top:clamp(64px,14vh,160px);padding-top:22px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:14px}
+.hero .meta b{display:block;font:600 16px var(--head);color:#fff;margin-bottom:2px}
+.hero .meta span{color:rgba(255,255,255,.55)}
+.hero .meta .r{text-align:right}
+.fade-in{opacity:0;transform:translateY(18px);animation:up 1.2s var(--ease) forwards}
+.scroll-cue{position:absolute;left:50%;bottom:22px;width:1px;height:46px;background:linear-gradient(rgba(255,255,255,0),rgba(255,255,255,.5));overflow:hidden}
+.scroll-cue::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:#fff;animation:cue 2.2s var(--ease) infinite}
+@keyframes cue{to{top:110%}}
+@media(max-width:640px){.hero .meta .r{text-align:left}.scroll-cue{display:none}}
+
+/* sections */
+section.s{padding:clamp(88px,12vw,150px) 0;position:relative}
+.eyebrow{font:600 12px var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.eyebrow.ela{color:var(--ela)} .eyebrow.ele{color:var(--ele)}
+h2{font-size:clamp(36px,5.4vw,64px);font-weight:700;max-width:900px}
+.sub{color:var(--muted);font-size:18px;max-width:680px;margin-top:20px}
+
+[data-r]{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease),transform 1.1s var(--ease);transition-delay:var(--d,0s)}
+[data-r].in{opacity:1;transform:none}
+
+/* 01 */
+.pos-text{font-size:clamp(22px,2.6vw,30px);line-height:1.45;max-width:880px;margin-top:34px;color:#3a4b5b;font-family:var(--head);font-weight:500;letter-spacing:-.015em}
+.pos-text strong{color:var(--ink);font-weight:700;background:linear-gradient(transparent 62%,var(--teal-soft) 62%)}
+.guide{margin-top:64px;background:var(--ink);color:#fff;border-radius:28px;padding:clamp(40px,7vw,90px);position:relative;overflow:hidden}
+.guide::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;right:-120px;top:-180px;background:radial-gradient(circle,#1f6e6a,rgba(16,38,58,0) 70%)}
+.guide small{position:relative;z-index:1;font:600 11.5px var(--body);letter-spacing:.24em;color:var(--teal-2)}
+.guide blockquote{position:relative;z-index:1;margin-top:20px;font:700 clamp(30px,5vw,62px)/1.1 var(--head);letter-spacing:-.035em}
+.guide blockquote span{opacity:.16;transition:opacity .4s}
+.guide blockquote span.lit{opacity:1}
+
+/* 02 */
+.split-bar{display:flex;height:64px;border-radius:16px;overflow:hidden;margin-top:48px;background:var(--line)}
+.split-bar div{width:0;transition:width 1.6s var(--ease);transition-delay:var(--d);display:flex;align-items:center;padding-left:18px;color:#fff;font:700 15px var(--head);white-space:nowrap;overflow:hidden}
+.split-bar.in div{width:var(--w)}
+.pillars{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px}
+.pillar{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s}
+.pillar:hover{transform:translateY(-4px);box-shadow:0 24px 50px -24px rgba(16,38,58,.25);border-color:transparent}
+.pillar .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.pillar h3{font:600 12.5px var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.pillar .pct{font:800 44px/1 var(--head);color:var(--teal);letter-spacing:-.04em}
+.pillar p{margin-top:16px;color:#33475a}
+.connect{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.connect>div{border-radius:22px;padding:32px}
+.connect .f{background:var(--ela-soft)} .connect .m{background:var(--ele-soft)}
+.connect small{font:600 12px var(--body);letter-spacing:.2em;text-transform:uppercase}
+.connect .f small{color:var(--ela)} .connect .m small{color:var(--ele)}
+.connect p{font:600 clamp(20px,2.2vw,26px)/1.3 var(--head);letter-spacing:-.02em;margin-top:12px}
+@media(max-width:760px){.pillars,.connect{grid-template-columns:1fr}.split-bar{height:52px}.split-bar div{font-size:13px;padding-left:12px}}
+
+/* 03/04 linhas */
+.s.alt{background:#fff}
+.persona{margin-top:40px;border-radius:24px;padding:34px 36px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center}
+.persona.f{background:var(--ela-soft)} .persona.m{background:var(--ele-soft)}
+.persona .tag{font:600 12px var(--body);letter-spacing:.22em;text-transform:uppercase}
+.persona.f .tag{color:var(--ela)} .persona.m .tag{color:var(--ele)}
+.persona p{font-size:19px;color:#25394b}
+.persona .age{font:800 clamp(40px,5vw,60px)/1 var(--head);letter-spacing:-.04em}
+.persona.f .age{color:var(--ela)} .persona.m .age{color:var(--ele)}
+.persona .age small{display:block;font:600 11px var(--body);letter-spacing:.2em;color:var(--muted);margin-top:6px;text-transform:uppercase}
+@media(max-width:640px){.persona{grid-template-columns:1fr;padding:26px 22px;gap:14px}}
+
+.rows{margin-top:40px;border-top:2px solid var(--c)}
+.rows .hd,.rows .row{display:grid;grid-template-columns:200px 1fr 1.35fr;gap:28px}
+.rows .hd{padding:14px 16px;font:600 11.5px var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line)}
+.rows .row{padding:24px 16px;border-bottom:1px solid var(--line);align-items:start;position:relative;transition:background .4s}
+.rows .row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c);transform:scaleY(0);transform-origin:top;transition:transform .5s var(--ease)}
+.rows .row:hover{background:var(--hl)}
+.rows .row:hover::before{transform:scaleY(1)}
+.rows .t{font:700 17px/1.3 var(--head)}
+.rows .v{font-style:italic;color:var(--muted)}
+.rows .g{display:flex;gap:14px;align-items:flex-start;justify-content:space-between}
+.rows .g span{font-weight:500}
+.rows.f{--c:var(--ela);--hl:#fdf5f1} .rows.m{--c:var(--ele);--hl:#f3f7fb}
+.rows .lbl{display:none}
+@media(max-width:820px){
+  .rows .hd{display:none}
+  .rows .row{grid-template-columns:1fr;gap:10px;padding:22px 6px 22px 16px}
+  .rows .lbl{display:block;font:600 10.5px var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:2px;font-style:normal}
+}
+.copy{flex:none;border:1px solid var(--line);background:#fff;border-radius:10px;width:34px;height:34px;display:grid;place-items:center;cursor:pointer;color:var(--muted);transition:.3s;opacity:.55}
+.copy:hover,.row:hover .copy,.card:hover .copy{opacity:1;color:var(--ink);border-color:#c9d0d6}
+.copy svg{width:15px;height:15px}
+.copy.ok{color:#fff;background:var(--teal);border-color:var(--teal);opacity:1}
+
+/* 05 pautas */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:52px}
+.colhd{font:600 12px var(--body);letter-spacing:.24em;text-transform:uppercase;padding-bottom:14px;border-bottom:2px solid currentColor;margin-bottom:6px}
+.colhd.f{color:var(--ela)} .colhd.m{color:var(--ele)}
+.pauta{display:grid;grid-template-columns:44px 1fr;gap:10px;padding:18px 0;border-bottom:1px solid var(--line);transition:padding .5s var(--ease)}
+.pauta:hover{padding-left:8px}
+.pauta b{font:700 14px var(--head);padding-top:3px}
+.f .pauta b,.pauta.f b{color:var(--ela)} .pauta.m b{color:var(--ele)}
+@media(max-width:820px){.cols{grid-template-columns:1fr;gap:48px}}
+
+/* 06 stories */
+.stack{display:flex;flex-direction:column;gap:14px;margin-top:14px}
+.story{border-radius:20px;padding:24px 26px;transition:transform .5s var(--ease)}
+.story:hover{transform:translateX(6px)}
+.story.f{background:var(--ela-soft)} .story.m{background:var(--ele-soft)} .story.a{background:var(--teal-soft)}
+.story small{font:600 11.5px var(--body);letter-spacing:.2em;text-transform:uppercase}
+.story.f small{color:var(--ela)} .story.m small{color:var(--ele)} .story.a small{color:var(--teal)}
+.story p{margin-top:8px;color:#22374a}
+.story p+p{margin-top:6px}
+
+/* 07/08 funil */
+.dark{background:var(--deep);color:#fff}
+.dark .sub{color:rgba(255,255,255,.6)}
+.dark .eyebrow{color:var(--teal-2)}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:44px}
+.seg{position:relative;display:inline-flex;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:999px;padding:5px}
+.seg button{position:relative;z-index:1;border:0;background:none;color:rgba(255,255,255,.65);font:600 14px var(--body);padding:11px 24px;border-radius:999px;cursor:pointer;transition:color .4s}
+.seg button.on{color:#fff}
+.seg .pill{position:absolute;top:5px;bottom:5px;left:5px;border-radius:999px;background:var(--ela);transition:transform .6s var(--ease),width .6s var(--ease),background .6s}
+.cta{display:flex;align-items:center;gap:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:14px 22px}
+.cta small{font:600 11px var(--body);letter-spacing:.22em;color:rgba(255,255,255,.55);white-space:nowrap}
+.cta b{font:700 17px var(--head)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+.card{position:relative;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.09);border-radius:22px;padding:28px;overflow:hidden;transition:transform .6s var(--ease),background .5s,border-color .5s,opacity .5s var(--ease)}
+.card::before{content:"";position:absolute;inset:0 0 auto;height:2px;background:var(--c)}
+.card:hover{transform:translateY(-4px);background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.16)}
+.card .top{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.card .tema{font:600 15px var(--head);color:rgba(255,255,255,.85)}
+.card .tipo{font:600 10.5px var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--c);white-space:nowrap}
+.card h3{font:700 clamp(21px,2.2vw,25px)/1.25 var(--head);letter-spacing:-.02em;margin:16px 0 12px;padding-right:44px}
+.card p{color:rgba(255,255,255,.62);font-size:15.5px}
+.card .copy{position:absolute;right:22px;top:64px;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:rgba(255,255,255,.7)}
+.card .copy.ok{background:var(--teal);border-color:var(--teal);color:#fff}
+.cards.swap .card{opacity:0;transform:translateY(14px)}
+.cards[data-g=f]{--c:#f08a5d} .cards[data-g=m]{--c:#7aa7da}
+@media(max-width:820px){.cards{grid-template-columns:1fr}.cta{width:100%}}
+
+/* 09 remarketing */
+.rm{margin-top:44px}
+.rm .row,.rm .hd{display:grid;grid-template-columns:190px 1.1fr 1fr;gap:28px;padding:22px 16px;border-bottom:1px solid var(--line)}
+.rm .hd{font:600 11.5px var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding:14px 16px;border-bottom:2px solid var(--teal)}
+.rm .row{transition:background .4s}
+.rm .row:hover{background:#f3f8f7}
+.rm .t{font:700 16.5px/1.3 var(--head)}
+.rm .h{font-weight:600}
+.rm .w{color:#41546a}
+.rm .lbl{display:none}
+@media(max-width:820px){.rm .hd{display:none}.rm .row{grid-template-columns:1fr;gap:8px}.rm .lbl{display:block;font:600 10.5px var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}}
+.note{margin-top:36px;background:var(--teal-soft);border-radius:20px;padding:28px 32px;color:#22374a}
+.note b{color:var(--ink)}
+.cta.light{background:var(--ink);border:0;color:#fff;margin-top:36px;display:inline-flex}
+
+/* 10 cuidados */
+.ethics .row .w{color:var(--warn)}
+.ethics .hd{border-bottom-color:var(--ink)}
+.rules{margin-top:56px;display:grid;gap:14px}
+.rules h4{font:600 12px var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.rule{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px}
+.rule i{font:700 15px var(--head);font-style:normal;width:36px;height:36px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center}
+.rule p{padding-top:5px}
+.src{margin-top:26px;font-size:14px;color:var(--muted)}
+
+/* footer */
+footer{background:var(--ink);color:#fff;padding:120px 0 48px;position:relative;overflow:hidden}
+footer .orb{top:auto;bottom:-60%;right:-20%;opacity:.8}
+footer .big{position:relative;font:700 clamp(34px,6vw,76px)/1.05 var(--head);letter-spacing:-.04em;max-width:960px}
+footer .big em{font-style:normal;color:var(--teal-2)}
+footer .meta{position:relative;margin-top:90px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:14px;color:rgba(255,255,255,.55)}
+footer .meta b{color:#fff;font-weight:600}
+
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,calc(100% + 60px));background:var(--ink);color:#fff;padding:12px 20px;border-radius:999px;font:500 14px var(--body);box-shadow:0 14px 40px -10px rgba(0,0,0,.4);transition:transform .6s var(--ease);z-index:70}
+.toast.show{transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  [data-r],.hero h1 .ch,.fade-in{opacity:1!important;transform:none!important}
+  .split-bar div{width:var(--w)}
+  .guide blockquote span{opacity:1}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<nav class="nav" id="nav" aria-label="Seções">
+  <span class="brand">Dr. Fred <i>·</i> Linha Editorial</span>
+  <div class="links">
+    <a href="#posicionamento">Posicionamento</a>
+    <a href="#pilares">Pilares</a>
+    <a href="#ela">Ela</a>
+    <a href="#ele">Ele</a>
+    <a href="#pautas">Pautas</a>
+    <a href="#stories">Stories</a>
+    <a href="#funil">Fundo de funil</a>
+    <a href="#remarketing">Remarketing</a>
+    <a href="#cuidados">Cuidados</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="orb" id="orb"></div>
+  <div class="orb b"></div>
+  <div class="grain"></div>
+  <div class="wrap">
+    <span class="chip fade-in" style="animation-delay:.1s">Estratégia de conteúdo</span>
+    <h1 id="title">Linha Editorial</h1>
+    <p class="lead fade-in" style="animation-delay:.8s">Como o Dr. Frederico Menezes comunica energia, equilíbrio hormonal e longevidade, com linhas distintas para mulheres e homens.</p>
+    <div class="meta fade-in" style="animation-delay:1.05s">
+      <div><b>Dr. Frederico Menezes</b><span>Limeira e região · Instagram</span></div>
+      <div class="r"><b>Felipe Cavalcanti</b><span>31 de outubro de 2026</span></div>
+    </div>
+  </div>
+  <div class="scroll-cue"></div>
+</header>
+
+<main>
+<!-- 01 -->
+<section class="s" id="posicionamento">
+  <div class="wrap">
+    <div class="eyebrow" data-r>01 · Posicionamento</div>
+    <h2 data-r style="--d:.08s">Além do emagrecimento</h2>
+    <p class="pos-text" data-r style="--d:.16s">O Dr. Fred deixa de ser só "o médico que emagrece" e passa a ser <strong>o médico que devolve energia, equilíbrio hormonal e qualidade de vida</strong>. O emagrecimento continua presente, mas como consequência, não como promessa principal.</p>
+    <div class="guide" data-r>
+      <small>FRASE-GUIA</small>
+      <blockquote id="guide">"Não é sobre o peso. É sobre voltar a se reconhecer."</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="s alt" id="pilares">
+  <div class="wrap">
+    <div class="eyebrow" data-r>02 · Pilares de conteúdo</div>
+    <h2 data-r style="--d:.08s">Quatro pilares, peso no mês</h2>
+    <div class="split-bar" data-r>
+      <div style="--w:30%;--d:.1s;background:#10263a">30% · Dor</div>
+      <div style="--w:30%;--d:.25s;background:#1b8a7e">30% · Educação</div>
+      <div style="--w:20%;--d:.4s;background:#3f9f93">20% · Método</div>
+      <div style="--w:20%;--d:.55s;background:#7cc0b5">20% · Prova</div>
+    </div>
+    <div class="pillars">
+      <div class="pillar" data-r><div class="top"><h3>1 · Dor reconhecida</h3><span class="pct" data-count="30">0%</span></div><p>Nomear o que a pessoa sente e não sabe explicar: cansaço, inchaço, irritação, libido baixa.</p></div>
+      <div class="pillar" data-r style="--d:.08s"><div class="top"><h3>2 · Educação clínica</h3><span class="pct" data-count="30">0%</span></div><p>Explicar a causa por trás: hormônios, sono, inflamação, metabolismo.</p></div>
+      <div class="pillar" data-r><div class="top"><h3>3 · Método e consulta</h3><span class="pct" data-count="20">0%</span></div><p>Como é a avaliação, os exames e o acompanhamento.</p></div>
+      <div class="pillar" data-r style="--d:.08s"><div class="top"><h3>4 · Prova e bastidor</h3><span class="pct" data-count="20">0%</span></div><p>Rotina do consultório, perguntas de pacientes e depoimentos dentro das regras do CFM.</p></div>
+    </div>
+    <div class="connect">
+      <div class="f" data-r><small>Ela se conecta com</small><p>"Me sinto inchada, cansada e sem vontade."</p></div>
+      <div class="m" data-r style="--d:.1s"><small>Ele se conecta com</small><p>"Rendo no trabalho e chego vazio em casa."</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section class="s" id="ela">
+  <div class="wrap">
+    <div class="eyebrow ela" data-r>03 · Linha feminina</div>
+    <h2 data-r style="--d:.08s">Para a mulher que cuida de todos e se perdeu de si</h2>
+    <div class="persona f" data-r>
+      <div class="age">35–60<small>anos</small></div>
+      <div><div class="tag">Quem é</div><p>Mulher de 35 a 60 anos com inchaço, cansaço, insônia, irritação e um corpo que não responde como antes.</p></div>
+    </div>
+    <div class="rows f" id="rows-f"><div class="hd"><span>Tema</span><span>Como ela fala</span><span>Gancho de abertura</span></div></div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="s alt" id="ele">
+  <div class="wrap">
+    <div class="eyebrow ele" data-r>04 · Linha masculina</div>
+    <h2 data-r style="--d:.08s">Para o homem que rende no trabalho e chega vazio em casa</h2>
+    <div class="persona m" data-r>
+      <div class="age">35–60<small>anos</small></div>
+      <div><div class="tag">Quem é</div><p>Homem de 35 a 60 anos, empresário ou profissional, com barriga, sono ruim, libido em queda e sem energia para a família.</p></div>
+    </div>
+    <div class="rows m" id="rows-m"><div class="hd"><span>Tema</span><span>Como ele fala</span><span>Gancho de abertura</span></div></div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="s" id="pautas">
+  <div class="wrap">
+    <div class="eyebrow" data-r>05 · Pautas prontas</div>
+    <h2 data-r style="--d:.08s">Vinte ideias para gravar</h2>
+    <div class="cols">
+      <div><div class="colhd f" data-r>Feminino</div><div id="pautas-f"></div></div>
+      <div><div class="colhd m" data-r>Masculino</div><div id="pautas-m"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 -->
+<section class="s alt" id="stories">
+  <div class="wrap">
+    <div class="eyebrow" data-r>06 · Stories</div>
+    <h2 data-r style="--d:.08s">Ideias para caixinha de perguntas</h2>
+    <p class="sub" data-r style="--d:.16s">Sugestões de chamada, uma ou duas por tema, só para dar direção.</p>
+    <div class="cols">
+      <div><div class="colhd f" data-r>Feminino</div><div class="stack" id="stories-f"></div></div>
+      <div><div class="colhd m" data-r>Masculino</div><div class="stack" id="stories-m"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 / 08 -->
+<section class="s dark" id="funil">
+  <div class="wrap">
+    <div class="eyebrow" data-r id="funil-eyebrow">07 · Fundo de funil · Feminino</div>
+    <h2 data-r style="--d:.08s" id="funil-title">Vídeos curtos para ela agendar</h2>
+    <p class="sub" data-r style="--d:.16s">Vídeos de 15 a 30 segundos, com a dor no primeiro segundo e ganchos de tipos diferentes para a Meta testar o que abre mais conversas.</p>
+    <div class="toolbar" data-r style="--d:.2s">
+      <div class="seg" id="seg">
+        <span class="pill"></span>
+        <button class="on" data-g="f">Para ela</button>
+        <button data-g="m">Para ele</button>
+      </div>
+      <div class="cta"><small>CTA FIXO</small><b>Clique aqui e agende sua consulta.</b></div>
+    </div>
+    <div class="cards" id="cards" data-g="f"></div>
+  </div>
+</section>
+
+<!-- 09 -->
+<section class="s" id="remarketing">
+  <div class="wrap">
+    <div class="eyebrow" data-r>09 · Remarketing</div>
+    <h2 data-r style="--d:.08s">Vídeos para quem já conhece o Dr. Fred</h2>
+    <p class="sub" data-r style="--d:.16s">O papel destes vídeos é tirar a última dúvida antes do agendamento.</p>
+    <div class="cta light" data-r><small>CTA FIXO</small><b>Clique aqui e agende sua consulta.</b></div>
+    <div class="rm" id="rm"><div class="hd"><span>Vídeo</span><span>Gancho (0–3 s)</span><span>O que mostra</span></div></div>
+    <div class="note" data-r><b>Regras de gravação:</b> legenda grande na tela, Dr. Fred falando direto para a câmera e corte seco depois do gancho. O CTA é falado e escrito na tela nos últimos 3 segundos. Nos anúncios, usar "se você sente…" em vez de afirmar uma condição de saúde da pessoa.</div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="s alt" id="cuidados">
+  <div class="wrap">
+    <div class="eyebrow" data-r>10 · Cuidados éticos e regulatórios</div>
+    <h2 data-r style="--d:.08s">Comunicar diagnóstico e acompanhamento, nunca o hormônio como produto</h2>
+    <p class="sub" data-r style="--d:.16s">Os temas hormonais são os que mais engajam e os que exigem mais cuidado com o CFM e com a Meta.</p>
+    <div class="rm ethics" id="ethics"><div class="hd"><span>Tema</span><span>Pode comunicar</span><span>Evitar</span></div></div>
+    <div class="rules">
+      <h4 data-r>Regras fixas em todo post e anúncio</h4>
+      <div class="rule" data-r><i>1</i><p>Nome do Dr. Fred e CRM visíveis. A palavra "especialista" só aparece se houver RQE na área.</p></div>
+      <div class="rule" data-r style="--d:.08s"><i>2</i><p>No anúncio, usar "se você sente…" ou "muitas mulheres sentem…" em vez de afirmar uma condição de saúde da pessoa, como pede a política da Meta.</p></div>
+      <div class="rule" data-r style="--d:.16s"><i>3</i><p>Antes de qualquer peça sobre implantes, confirmar o status atual da regra da Anvisa.</p></div>
+    </div>
+    <p class="src" data-r>Fontes: CFM – Resolução 2.333/2023 · Anvisa suspende chips da beleza (out/2024)</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="orb"></div>
+  <div class="wrap">
+    <p class="big" data-r>Não é sobre o peso. <em>É sobre voltar a se reconhecer.</em></p>
+    <div class="meta"><span><b>Linha Editorial</b> · Dr. Frederico Menezes</span><span>Felipe Cavalcanti · 31 de outubro de 2026</span></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Gancho copiado</div>
+
+<script>
+const D = {
+  linhaF: [
+    ['Lipedema','Faço dieta, treino, e minhas pernas não mudam','Se suas pernas doem ao toque e não diminuem com dieta, isso pode não ser gordura comum.'],
+    ['Perimenopausa','Do nada comecei a dormir mal e engordar na barriga','A menopausa começa anos antes da última menstruação. E quase ninguém te avisa.'],
+    ['Menopausa','Calorões, insônia, não me reconheço','Você não está ficando louca. São seus hormônios.'],
+    ['Reposição hormonal','Tenho medo de hormônio, dizem que dá câncer','Reposição hormonal: o que a ciência diz hoje, sem medo e sem modismo.'],
+    ['Falta de energia','Acordo cansada, termino o dia exausta','Cansaço todo dia não é normal, mesmo com filhos e trabalho.'],
+    ['Libido','Perdi a vontade e me sinto culpada','Falta de desejo tem causa, e quase sempre tem tratamento.'],
+    ['Inchaço e retenção','Acordo bem e à noite estou outra pessoa','O inchaço que não sai com chá nenhum.'],
+    ['Humor e TPM','Fico irritada com tudo e não consigo controlar','Não é frescura. Oscilação hormonal muda o humor.'],
+    ['Tireoide','Meus exames sempre dão normais',"Exame 'normal' não quer dizer que você está bem."],
+    ['Longevidade','Quero envelhecer bem, não só viver mais','Os 3 exames que toda mulher acima dos 40 deveria fazer.']
+  ],
+  linhaM: [
+    ['Energia para a família','Dou tudo na empresa e chego em casa sem nada','Você constrói a empresa para a família, mas chega em casa sem energia para ela.'],
+    ['Testosterona baixa','Perdi o gás, a vontade e a paciência','Cansaço, barriga e libido baixa: pode ser a sua testosterona.'],
+    ['Reposição hormonal','Tenho medo de hormônio, parece coisa de academia','Reposição de testosterona não é bomba. É diagnóstico, exame e acompanhamento.'],
+    ['Gordura abdominal','A barriga não sai nem com treino','A barriga do homem de 40 tem mais a ver com hormônio e sono do que com abdominal.'],
+    ['Sono e estresse','Durmo 5 horas e vivo no café','O café não está te dando energia. Está escondendo o seu cansaço.'],
+    ['Foco e performance','Esqueço as coisas e perdi o foco','A névoa mental que todo empresário acha que é normal.'],
+    ['Libido e vida a dois','Não tenho mais vontade e evito o assunto','Libido baixa não é falta de amor. É um sinal do corpo.'],
+    ['Saúde metabólica','Glicose e pressão subindo, mas me sinto bem','Os números que o seu check-up mostra antes de virar problema.'],
+    ['Longevidade','Quero ver meus netos crescerem com saúde','Seu maior ativo não é a empresa. É o seu corpo.']
+  ],
+  pautasF: [
+    '5 sinais de lipedema que não são celulite',
+    'Lipedema x obesidade x linfedema: a diferença explicada',
+    'Perimenopausa: 7 sintomas que você acha que são estresse',
+    'Por que a barriga cresce depois dos 40 mesmo comendo igual',
+    'Mitos da reposição hormonal que fazem mulheres sofrerem à toa',
+    'O que acontece na primeira consulta de avaliação hormonal',
+    'Sono ruim, fome à noite e ganho de peso: a ligação',
+    '"Eu cuidava de todos, menos de mim": história de paciente (com autorização, sem antes e depois)',
+    'Ferro, vitamina D e B12: o cansaço que aparece no exame',
+    'Pergunta da paciente: "Doutor, isso é da idade?"'
+  ],
+  pautasM: [
+    '6 sinais de testosterona baixa que você confunde com estresse',
+    'Rotina de empresário: como recuperar energia sem largar o trabalho',
+    'Por que você dorme e acorda cansado',
+    'Os exames que todo homem acima dos 35 deveria fazer',
+    'Reposição de testosterona: quando faz sentido e quando não faz',
+    'Gordura abdominal e risco do coração: a medida que importa',
+    '"Meu filho me chamou para jogar bola e eu não tive fôlego": história real',
+    'Álcool no fim de semana e energia na segunda-feira',
+    'O que muda quando o homem volta a ter energia: trabalho, casamento e filhos',
+    'Pergunta do paciente: "Doutor, isso é da idade?"'
+  ],
+  storiesF: [
+    ['Lipedema',['Suas pernas doem e não afinam com dieta? Me pergunte sobre lipedema.','Lipedema ou celulite? Manda sua dúvida.']],
+    ['Menopausa e perimenopausa',['Calorões, insônia, irritação? Pergunte o que quiser sobre menopausa.','Com quantos anos começa a perimenopausa? Mande sua dúvida.']],
+    ['Reposição hormonal',['Qual o seu maior medo sobre reposição hormonal?']],
+    ['Cansaço e energia',['Você acorda cansada? Me conta sua rotina que eu comento.']],
+    ['Libido e humor',['Pergunta sem vergonha: o que você quer saber sobre libido feminina?']],
+    ['Inchaço',['Acorda bem e termina o dia inchada? Me pergunte o porquê.']]
+  ],
+  storiesM: [
+    ['Energia para a família',['Rende no trabalho e chega em casa sem energia? Me pergunte o que pode ser.']],
+    ['Testosterona',['O que você quer saber sobre testosterona e nunca teve coragem de perguntar?','Reposição de testosterona: mito ou verdade? Mande a sua.']],
+    ['Barriga e metabolismo',['Treina e a barriga não sai? Mande sua dúvida.']],
+    ['Sono e estresse',['Quantas horas você dorme? Me conta que eu digo o que isso causa.']],
+    ['Libido',['Libido baixa depois dos 40: pergunte de forma anônima.']],
+    ['Ambos · Longevidade',['Quais exames você fez no último ano? Me pergunte o que está faltando.'],'a']
+  ],
+  funilF: [
+    ['Lipedema','Identificação','Dieta, treino, drenagem… e suas pernas continuam iguais?','Isso pode ser lipedema, não falta de esforço. Tem diagnóstico e tem tratamento.'],
+    ['Lipedema','Quebra de crença','Não é celulite. E não é culpa sua.','Dor ao toque, roxos fáceis e pernas desproporcionais são sinais para investigar.'],
+    ['Menopausa','Frase forte','Você não está ficando louca.','Calorões, insônia e irritação têm causa hormonal, e dá para tratar com segurança.'],
+    ['Perimenopausa','Pergunta','Passou dos 40 e começou a dormir mal e engordar na barriga?','A perimenopausa começa antes do que você imagina. Uma avaliação mostra o que está acontecendo.'],
+    ['Reposição hormonal','Mito x verdade','Reposição hormonal dá câncer? Vamos falar sério.','Com indicação, exames e acompanhamento, é tratamento médico, não modismo.'],
+    ['Energia','Número','3 exames que explicam o seu cansaço.','Ferro, vitamina D e tireoide. Cansaço todo dia não é normal.'],
+    ['Libido','Frase forte','Perder a vontade não é normal. E não é culpa sua.','Hormônios, sono e estresse mexem com o desejo, e isso tem tratamento.'],
+    ['Emagrecimento + hormônios','Quebra de crença','Comer menos não está funcionando? O problema pode não ser a comida.','Hormônios e metabolismo travam o emagrecimento. A consulta investiga a causa.']
+  ],
+  funilM: [
+    ['Energia para a família','Identificação','Você dá tudo na empresa e chega em casa sem nada para a sua família?','Falta de energia tem causa: sono, hormônios e metabolismo. Dá para recuperar.'],
+    ['Testosterona','Pergunta','Cansaço, barriga e libido baixa ao mesmo tempo?','Pode ser testosterona baixa. Um exame simples começa a responder.'],
+    ['Reposição de testosterona','Quebra de crença','Reposição de testosterona não é bomba.','É diagnóstico, exame e acompanhamento médico, só quando há indicação.'],
+    ['Gordura abdominal','Frase forte','Essa barriga não sai com abdominal.','Depois dos 40, hormônio e sono pesam mais que treino. A consulta mostra o caminho.'],
+    ['Sono e estresse','Número','5 horas de sono e 4 cafés por dia. Conhece alguém assim?','O café esconde o cansaço. O corpo cobra na saúde e em casa.'],
+    ['Foco','Identificação','Esquecendo coisas e sem foco nas reuniões?','A névoa mental não é normal e quase sempre tem causa tratável.'],
+    ['Libido','Frase forte','Libido baixa não é falta de amor.','É um sinal do corpo, e homem também precisa falar disso com o médico.'],
+    ['Longevidade','Contraste','Você faz revisão no carro todo ano. E no seu corpo?','Check-up hormonal e metabólico para viver mais e melhor.']
+  ],
+  rm: [
+    ['Como é a consulta','Quer saber exatamente o que acontece na sua primeira consulta comigo?','Escuta, exame físico, pedido de exames e plano individual, passo a passo.'],
+    ['Bastidor do consultório','Esse é o lugar onde a sua mudança começa.','Tour rápido pela recepção e pela sala, com o Dr. Fred falando para a câmera.'],
+    ['Você já me acompanha','Se esse vídeo apareceu para você, é porque você já acompanha meu trabalho.','Convite direto: o próximo passo é a avaliação.'],
+    ['Depoimento','Ela chegou cansada, inchada e sem se reconhecer.','História real com autorização, falando de experiência, sem antes e depois e sem promessa.'],
+    ['Objeção: medo','Tem receio de começar um tratamento hormonal?','Nada é feito sem exame e indicação. Acompanhamento de perto.'],
+    ['Objeção: tempo','Sem tempo para cuidar de você?','A consulta é organizada para a rotina de quem trabalha. Uma hora pode mudar o seu ano.'],
+    ['Perguntas frequentes','As 3 perguntas que mais recebo antes da primeira consulta.','Onde atende, como agendar, o que levar.'],
+    ['Agenda','Abri novos horários para este mês.','Convite para garantir a vaga, sem pressionar.'],
+    ['Versão masculina','Homem, você não precisa esperar chegar ao limite.','Convite para o check-up de energia, hormônios e metabolismo.'],
+    ['Versão feminina','Você cuida de todo mundo. Quando foi a última vez que cuidou de você?','Convite para a avaliação feminina completa.']
+  ],
+  ethics: [
+    ['Reposição hormonal (F e M)','Sintomas, exames, quando há indicação clínica (menopausa, hipogonadismo)','Hormônio para estética, ganho de massa ou performance (Resolução CFM 2.333/2023)'],
+    ['Implantes hormonais','Educação geral sobre vias de reposição e segurança','"Chip da beleza" e implantes manipulados: a Anvisa suspendeu fabricação, venda e propaganda em outubro de 2024'],
+    ['Longevidade','Sono, exames preventivos, metabolismo, força muscular, hábitos','Hormônio "anti-aging" (Resolução CFM 1.999/2012)'],
+    ['Gestrinona e "bioidênticos" com nome comercial','—','Citar ou promover (CFM 2.333/2023)'],
+    ['Resultados','Histórias de pacientes com autorização e linguagem de experiência','Promessa de resultado, prazo garantido ou "cura"']
+  ]
+};
+
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>';
+const copyBtn = t => `<button class="copy" data-copy="${esc(t)}" aria-label="Copiar gancho">${ICON}</button>`;
+const $ = id => document.getElementById(id);
+
+function rows(el, list, who) {
+  el.insertAdjacentHTML('beforeend', list.map(([t, v, g]) => `
+    <div class="row" data-r>
+      <div class="t">${t}</div>
+      <div class="v"><span class="lbl">Como ${who} fala</span>"${esc(v)}"</div>
+      <div><span class="lbl">Gancho de abertura</span><div class="g"><span>"${esc(g)}"</span>${copyBtn(g)}</div></div>
+    </div>`).join(''));
+}
+rows($('rows-f'), D.linhaF, 'ela');
+rows($('rows-m'), D.linhaM, 'ele');
+
+const pautas = (el, list, g) => el.innerHTML = list.map((p, i) =>
+  `<div class="pauta ${g}" data-r style="--d:${(i % 5) * .04}s"><b>${String(i + 1).padStart(2, '0')}</b><span>${esc(p)}</span></div>`).join('');
+pautas($('pautas-f'), D.pautasF, 'f');
+pautas($('pautas-m'), D.pautasM, 'm');
+
+const stories = (el, list, g) => el.innerHTML = list.map(([t, qs, k]) =>
+  `<div class="story ${k || g}" data-r><small>${t}</small>${qs.map(q => `<p>"${esc(q)}"</p>`).join('')}</div>`).join('');
+stories($('stories-f'), D.storiesF, 'f');
+stories($('stories-m'), D.storiesM, 'm');
+
+function table(el, list, cls) {
+  el.insertAdjacentHTML('beforeend', list.map(([a, b, c]) => `
+    <div class="row" data-r>
+      <div class="t">${esc(a)}</div>
+      <div class="h"><span class="lbl">${cls[0]}</span>${b}</div>
+      <div class="w"><span class="lbl">${cls[1]}</span>${c}</div>
+    </div>`).join(''));
+}
+table($('rm'), D.rm.map(([a, b, c]) => [a, `“${esc(b)}”`, esc(c)]), ['Gancho (0–3 s)', 'O que mostra']);
+table($('ethics'), D.ethics.map(([a, b, c]) => [a, esc(b), esc(c)]), ['Pode comunicar', 'Evitar']);
+
+const cardsEl = $('cards');
+const renderCards = g => cardsEl.innerHTML = (g === 'f' ? D.funilF : D.funilM).map(([tema, tipo, h, p]) => `
+  <article class="card">
+    <div class="top"><span class="tema">${esc(tema)}</span><span class="tipo">${tipo}</span></div>
+    <h3>“${esc(h)}”</h3>${copyBtn(h)}
+    <p>${esc(p)}</p>
+  </article>`).join('');
+renderCards('f');
+
+/* segmented switch */
+const seg = $('seg'), pill = seg.querySelector('.pill');
+const META = {
+  f: ['07 · Fundo de funil · Feminino', 'Vídeos curtos para ela agendar', 'var(--ela)'],
+  m: ['08 · Fundo de funil · Masculino', 'Vídeos curtos para ele agendar', 'var(--ele)']
+};
+function placePill() {
+  const b = seg.querySelector('.on');
+  pill.style.width = b.offsetWidth + 'px';
+  pill.style.transform = `translateX(${b.offsetLeft - 5}px)`;
+}
+seg.addEventListener('click', e => {
+  const b = e.target.closest('button');
+  if (!b || b.classList.contains('on')) return;
+  seg.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
+  const g = b.dataset.g;
+  pill.style.background = META[g][2];
+  placePill();
+  $('funil-eyebrow').textContent = META[g][0];
+  $('funil-title').textContent = META[g][1];
+  cardsEl.classList.add('swap');
+  setTimeout(() => {
+    cardsEl.dataset.g = g;
+    renderCards(g);
+    cardsEl.querySelectorAll('.card').forEach((c, i) => c.style.transitionDelay = i * 45 + 'ms');
+    requestAnimationFrame(() => requestAnimationFrame(() => cardsEl.classList.remove('swap')));
+    setTimeout(() => cardsEl.querySelectorAll('.card').forEach(c => c.style.transitionDelay = ''), 900);
+  }, 380);
+});
+addEventListener('resize', placePill);
+document.fonts.ready.then(placePill);
+placePill();
+
+/* copy */
+const toast = $('toast');
+let tt;
+document.addEventListener('click', async e => {
+  const b = e.target.closest('.copy');
+  if (!b) return;
+  try { await navigator.clipboard.writeText(b.dataset.copy); } catch { return; }
+  b.classList.add('ok');
+  setTimeout(() => b.classList.remove('ok'), 1400);
+  toast.classList.add('show');
+  clearTimeout(tt);
+  tt = setTimeout(() => toast.classList.remove('show'), 1600);
+});
+
+/* hero title split */
+const title = $('title');
+let n = 0;
+title.innerHTML = title.textContent.split(' ').map(w =>
+  `<span class="w">${[...w].map(c => `<span class="ch" style="--i:${n++}">${c}</span>`).join('')}</span>`).join(' ');
+
+/* frase-guia word reveal */
+const guide = $('guide');
+guide.innerHTML = guide.textContent.split(' ').map(w => `<span>${w}</span>`).join(' ');
+const words = [...guide.children];
+
+/* reveal on scroll */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  e.target.classList.add('in');
+  io.unobserve(e.target);
+  e.target.querySelectorAll('[data-count]').forEach(count);
+  if (e.target.matches('.split-bar')) e.target.classList.add('in');
+}), { rootMargin: '0px 0px -8% 0px', threshold: .12 });
+document.querySelectorAll('[data-r]').forEach(el => io.observe(el));
+
+function count(el) {
+  const to = +el.dataset.count, t0 = performance.now();
+  const step = t => {
+    const p = Math.min((t - t0) / 1400, 1);
+    el.textContent = Math.round(to * (1 - Math.pow(1 - p, 4))) + '%';
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+/* smooth scroll */
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let lenis = null;
+if (window.Lenis && !reduce) {
+  lenis = new Lenis({ lerp: .085, smoothWheel: true });
+  window.__lenis = lenis;
+  const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
+  requestAnimationFrame(raf);
+}
+document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+  const el = document.querySelector(a.getAttribute('href'));
+  if (!el) return;
+  e.preventDefault();
+  lenis ? lenis.scrollTo(el, { offset: -70, duration: 1.6 }) : el.scrollIntoView({ behavior: 'smooth' });
+}));
+
+/* scroll-driven: progress, nav, orb parallax, guide words, active link */
+const nav = $('nav'), bar = $('progress'), orb = $('orb');
+const links = [...nav.querySelectorAll('a')];
+const secs = links.map(a => document.querySelector(a.getAttribute('href')));
+function onScroll() {
+  const y = scrollY, h = document.documentElement.scrollHeight - innerHeight;
+  bar.style.transform = `scaleX(${h > 0 ? y / h : 0})`;
+  nav.classList.toggle('show', y > innerHeight * .6);
+  if (!reduce) orb.style.translate = `0 ${y * .25}px`;
+  const r = guide.getBoundingClientRect();
+  const p = Math.min(Math.max((innerHeight * .85 - r.top) / (innerHeight * .5), 0), 1);
+  words.forEach((w, i) => w.classList.toggle('lit', reduce || i < p * words.length + .5));
+  let cur = -1;
+  secs.forEach((s, i) => { if (s && s.getBoundingClientRect().top < innerHeight * .4) cur = i; });
+  links.forEach((a, i) => a.classList.toggle('on', i === cur));
+}
+lenis ? lenis.on('scroll', onScroll) : addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+</script>
+</body>
+</html>
