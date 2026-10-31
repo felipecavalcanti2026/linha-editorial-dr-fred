@@ -156,8 +156,11 @@ h2{font-size:clamp(36px,5.4vw,64px);font-weight:700;max-width:900px}
 .story.f{background:var(--ela-soft)} .story.m{background:var(--ele-soft)} .story.a{background:var(--teal-soft)}
 .story small{font:600 11.5px var(--body);letter-spacing:.2em;text-transform:uppercase}
 .story.f small{color:var(--ela)} .story.m small{color:var(--ele)} .story.a small{color:var(--teal)}
-.story p{margin-top:8px;color:#22374a}
-.story p+p{margin-top:6px}
+.story .q{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;background:#fff;border-radius:16px 16px 16px 4px;padding:13px 12px 13px 16px;margin-top:10px;box-shadow:0 6px 18px -12px rgba(16,38,58,.35);transition:transform .4s var(--ease)}
+.story .q:first-of-type{margin-top:14px}
+.story .q:hover{transform:translateX(4px)}
+.story .q p{color:#22374a;font-size:15.5px;line-height:1.5;padding-top:5px}
+.story .q:hover .copy{opacity:1;color:var(--ink)}
 
 /* 07/08 funil */
 .dark{background:var(--deep);color:#fff}
@@ -344,8 +347,8 @@ footer .meta b{color:#fff;font-weight:600}
 <section class="s alt" id="stories">
   <div class="wrap">
     <div class="eyebrow" data-r>06 · Stories</div>
-    <h2 data-r style="--d:.08s">Ideias para caixinha de perguntas</h2>
-    <p class="sub" data-r style="--d:.16s">Sugestões de chamada, uma ou duas por tema, só para dar direção.</p>
+    <h2 data-r style="--d:.08s">Caixinha de perguntas: o que os pacientes perguntam</h2>
+    <p class="sub" data-r style="--d:.16s">Perguntas no tom de quem segue o Dr. Fred, para ele responder nos stories. Uma resposta por story, olhando para a câmera.</p>
     <div class="cols">
       <div><div class="colhd f" data-r>Feminino</div><div class="stack" id="stories-f"></div></div>
       <div><div class="colhd m" data-r>Masculino</div><div class="stack" id="stories-m"></div></div>
@@ -409,7 +412,7 @@ footer .meta b{color:#fff;font-weight:600}
   </div>
 </footer>
 
-<div class="toast" id="toast">Gancho copiado</div>
+<div class="toast" id="toast">Copiado</div>
 
 <script>
 const D = {
@@ -461,20 +464,20 @@ const D = {
     'Pergunta do paciente: "Doutor, isso é da idade?"'
   ],
   storiesF: [
-    ['Lipedema',['Suas pernas doem e não afinam com dieta? Me pergunte sobre lipedema.','Lipedema ou celulite? Manda sua dúvida.']],
-    ['Menopausa e perimenopausa',['Calorões, insônia, irritação? Pergunte o que quiser sobre menopausa.','Com quantos anos começa a perimenopausa? Mande sua dúvida.']],
-    ['Reposição hormonal',['Qual o seu maior medo sobre reposição hormonal?']],
-    ['Cansaço e energia',['Você acorda cansada? Me conta sua rotina que eu comento.']],
-    ['Libido e humor',['Pergunta sem vergonha: o que você quer saber sobre libido feminina?']],
-    ['Inchaço',['Acorda bem e termina o dia inchada? Me pergunte o porquê.']]
+    ['Lipedema',['Doutor, minhas pernas doem só de encostar e ficam roxas à toa. Pode ser lipedema?','Faço academia 5x por semana e minha perna não afina de jeito nenhum. É genético?','Como eu sei se é lipedema ou só celulite?','Lipedema tem cura ou só controla?']],
+    ['Menopausa e perimenopausa',['Tenho 43 anos, ainda menstruo, mas não durmo mais direito. Pode ser perimenopausa?','Os calorões estão me acordando de madrugada. Isso passa sozinho?','Engordei 6 kg na barriga depois dos 45 sem mudar nada na alimentação. Por quê?','Com quantos anos começa a perimenopausa?']],
+    ['Reposição hormonal',['Minha mãe teve câncer de mama. Eu posso fazer reposição hormonal?','Reposição hormonal engorda?','Se eu começar a reposição, vou ter que tomar pro resto da vida?','Quais exames preciso fazer antes de pensar em reposição?']],
+    ['Cansaço e energia',['Acordo cansada mesmo dormindo 8 horas. É normal?','Meus exames vieram normais, mas eu vivo exausta. O que mais pode ser?','Vitamina D baixa pode dar tanto cansaço assim?']],
+    ['Libido e humor',['Perdi totalmente a vontade e meu marido acha que é com ele. Tem explicação?','Antes da menstruação eu viro outra pessoa. Isso tem tratamento?','Anticoncepcional pode diminuir a libido?']],
+    ['Inchaço',['De manhã a calça fecha, à noite não fecha mais. Por que eu incho tanto?','Chá diurético resolve inchaço?','É hormonal eu inchar mais na semana antes de menstruar?']]
   ],
   storiesM: [
-    ['Energia para a família',['Rende no trabalho e chega em casa sem energia? Me pergunte o que pode ser.']],
-    ['Testosterona',['O que você quer saber sobre testosterona e nunca teve coragem de perguntar?','Reposição de testosterona: mito ou verdade? Mande a sua.']],
-    ['Barriga e metabolismo',['Treina e a barriga não sai? Mande sua dúvida.']],
-    ['Sono e estresse',['Quantas horas você dorme? Me conta que eu digo o que isso causa.']],
-    ['Libido',['Libido baixa depois dos 40: pergunte de forma anônima.']],
-    ['Ambos · Longevidade',['Quais exames você fez no último ano? Me pergunte o que está faltando.'],'a']
+    ['Energia para a família',['Trabalho 12 horas por dia e chego em casa sem paciência nem para os meus filhos. Isso é só cansaço?','Tenho 42 anos. É normal não ter mais a disposição de antes?','No fim de semana eu só quero dormir. Isso é sinal de alguma coisa?']],
+    ['Testosterona',['Quais são os sinais de testosterona baixa?','Dá para ter testosterona baixa aos 38 anos?','Repor testosterona é a mesma coisa que tomar bomba?','Quem faz reposição de testosterona pode ficar infértil?']],
+    ['Barriga e metabolismo',['Treino quase todo dia e a barriga não sai. O que estou fazendo errado?','Barriga grande é só estética ou é risco para o coração?','Minha glicose deu 104 no exame. Já é para me preocupar?']],
+    ['Sono e estresse',['Durmo 5 horas por noite e funciono bem. Preciso mesmo de mais?','Tomo uns 5 cafés por dia. Isso atrapalha meu sono?','Ronco muito e acordo cansado. Tem relação?']],
+    ['Libido',['Tenho 45 anos e a vontade sumiu. É da idade?','Estresse do trabalho pode derrubar a libido?','Libido baixa pode ser testosterona?']],
+    ['Ambos · Longevidade',['Quais exames eu deveria fazer todo ano depois dos 40?','O check-up comum já avalia os hormônios?','O que mais importa para envelhecer com saúde: dieta, treino ou sono?'],'a']
   ],
   funilF: [
     ['Lipedema','Identificação','Dieta, treino, drenagem… e suas pernas continuam iguais?','Isso pode ser lipedema, não falta de esforço. Tem diagnóstico e tem tratamento.'],
@@ -539,7 +542,7 @@ pautas($('pautas-f'), D.pautasF, 'f');
 pautas($('pautas-m'), D.pautasM, 'm');
 
 const stories = (el, list, g) => el.innerHTML = list.map(([t, qs, k]) =>
-  `<div class="story ${k || g}" data-r><small>${t}</small>${qs.map(q => `<p>"${esc(q)}"</p>`).join('')}</div>`).join('');
+  `<div class="story ${k || g}" data-r><small>${t}</small>${qs.map(q => `<div class="q"><p>${esc(q)}</p>${copyBtn(q)}</div>`).join('')}</div>`).join('');
 stories($('stories-f'), D.storiesF, 'f');
 stories($('stories-m'), D.storiesM, 'm');
 
